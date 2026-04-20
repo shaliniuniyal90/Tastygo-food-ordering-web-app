@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="login-left">
+            <h1>Welcome Back🍔</h1>
+            <p>Order your favorite food anytime</p>
+        </div>
+
+        <div class="login-right">
+            <h2>Login</h2>
+
+            <input type="email" id="email" placeholder="Enter Email">
+            <input type="password" id="password" placeholder="Enter password">
+
+            <button type="button" onclick="loginUser()">Login</button>
+            <p class="extra">Don't have an account?<a href="signup.html">Sign up</a></p>
+            <p id="error"></p>
+        </div>
+    </div>
+   
+    <script src="js/login.js"></script>
+</body>
+</html>

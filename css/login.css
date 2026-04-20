@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.login-wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+
+.login-left {
+    flex: 1;
+    background: url('../images/banner_.jpg') no-repeat center/cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+}
+
+.login-left h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.login-left p {
+    font-size: 18px;
+}
+
+
+.login-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+    background: #fff;
+}
+
+/* Heading */
+.login-right h2 {
+    margin-bottom: 20px;
+}
+
+
+.login-right input {
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+.login-right input:focus {
+    border-color: orange;
+}
+
+/* Button */
+.login-right button {
+    padding: 12px;
+    background: orange;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.login-right button:hover {
+    background: #ff8800;
+}
+
+
+.extra {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.extra a {
+    color: orange;
+    text-decoration: none;
+}
+
+
+#msg {
+    color: green;
+    margin-top: 10px;
+}
+
+#error {
+    color: red;
+    margin-top: 10px;
+}
+
+/* 🔥 CARD STYLE */
+.login-right{
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* MOBILE ME CARD LOOK */
+@media (max-width: 768px){
+    .login-right{
+        border-radius: 12px;
+        margin: 40px auto;
+        max-width: 350px;
+    }
+}

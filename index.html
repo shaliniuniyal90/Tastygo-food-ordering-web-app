@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food With Shalini</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- navbar -->
+    <header>
+        <nav class="navbar">
+
+    <div class="logo">Tasty<span>Go🍽️</span></div>
+
+    <ul class="nav_links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="offer.html">Offers</a></li>
+        <li class="mobile-only"><a href="login.html">Login</a></li>
+        <li class="mobile-only"><a href="#" onclick="logout()">Logout</a></li>
+        <li class="mobile-only">
+    <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+</li>
+        
+    </ul>
+
+    <div class="nav_right">
+
+        <div class="cart_icon">
+            <a href="cart.html">
+                <i class="fa-solid fa-shopping-cart"></i>
+            </a>
+        </div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <div class="search_box">
+            <input type="text" id="searchInput" placeholder="Search food..." />
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <a href="login.html" class="login_link">
+            <i class="fa-solid fa-user"></i>
+        </a>
+
+        <div class="logout_icon" onclick="logout()" title="Logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+
+        <div class="login_btn">
+            <a href="#" onclick="checkLoginAndRedirect('menu.html')">ORDER NOW</a>
+        </div>
+
+    </div> 
+
+</nav>
+
+    </header>
+    
+
+    
+     <section class="hero">
+  <div class="hero_content">
+
+    <h1>
+      <span class="script">Satisfy Your</span><br>
+      <span class="bold">Cravings</span>
+    </h1>
+
+    <p>Delicious Food Delivered Hot & Fresh</p>
+
+    
+     <a href="#" onclick="checkLoginAndRedirect('menu.html')" class="hero_btn">
+ORDER NOW
+</a>
+
+  </div>
+</section>
+    
+
+     <!-- card section -->
+      <section class="about_wrapper">
+     <div class="about">
+        <div class="about_text">
+            <h2>Why Choose Tasty<span>Go</span>🍽️</h2>
+            <p> We provide fresh, delicious and hygienic food delivered directly to your home. 
+         Our mission is to make your food experience simple, fast and tasty.
+         TastyGo is your trusted platform for fresh and delicious food delivered right to your doorstep. 
+         We focus on quality, hygiene, and fast service to give you the best food experience. 
+         With a wide variety of options and easy ordering, we make every meal simple, quick, and satisfying.</p>
+
+         <!-- <button class="about_btn">Explore Manu</button> -->
+          <button class="about_btn" onclick="checkLoginAndRedirect('menu.html')">
+Explore Menu
+</button>
+        </div>
+        <div class="about_image">
+            <img src="images/about2.png" >
+        </div>
+             
+         </div>
+        </div>
+     </section>
+     <section class="features">
+        <h2>How It Works</h2>
+        <p>Follow these simple steps to order your favorite food</p>
+        <div class="feature_box">
+            <div class="box">
+                <div class="icon">🍔</div>
+                <h3>Select Food</h3>
+                <p>Choose your favorite dishes from our menu</p>
+            </div>
+            
+            <div class="box">
+                <div class="icon">⚙️</div>
+                <h3>Customize</h3>
+                <p>Modify your order as per your taste</p>
+            </div>
+
+            <div class="box">
+                <div class="icon">🛒</div>
+                    <h3>Place Order</h3>
+                    <p>Quick and easy checkout process</p>
+                
+            </div>
+            <div class="box">
+                <div class="icon">🚚</div>
+                <h3>Fast Delivery</h3>
+                <p>Get your food delivered at your doorstep</p>
+            </div>
+
+        </div>
+     </section>
+    
+     <section class="menu-section">
+    <h2>Our Menu</h2>
+
+    <!-- 🔘 Filters -->
+    <div class="menu-filters">
+        <button class="active" onclick="filterMenu('all')">All</button>
+        <button onclick="filterMenu('burger')">Burger</button>
+        <button onclick="filterMenu('pizza')">Pizza</button>
+        <button onclick="filterMenu('sandwich')">Sandwich</button>
+        <button onclick="filterMenu('fries')">Fries</button>
+        <button onclick="filterMenu('drink')">Drinks</button>
+    </div>
+
+   
+    <div class="menu-container">
+
+        <div class="menu-card pizza" data-name="Margherita Pizza" data-price="20" data-image="images/margherita_Pizza.jpg">
+            <img src="images/margherita_Pizza.jpg" loading="eager">
+            <div class="card-content">
+                <h3>Margherita Pizza</h3>
+                <p>A simple Italian pizza with tomato, mozzarella, and basil, loved for its fresh flavor.</p>
+                <div class="price">
+                    <span>$20</span>
+                     <i class="fa-solid fa-bag-shopping cart-btn"></i>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="menu-card burger" data-name="Classic Cheeseburger" data-price="15" data-image="images/chees_burger.jpg">
+            <img src="images/chees_burger.jpg" loading="eager">
+            <div class="card-content">
+                <h3>Classic Cheeseburger</h3>
+                <p>Juicy grilled patty with melted cheese and fresh veggies.</p>
+               <div class="price">
+                 <span>$15</span>
+                  <i class="fa-solid fa-bag-shopping cart-btn"></i>
+               </div>
+            </div>
+        </div>
+
+        <div class="menu-card sandwich" data-name="Veg Grilled Sandwiches" data-price="10" data-image="images/veg_grilledsandwich.jpg">
+            <img src="images/veg_grilledsandwich.jpg" loading="eager">
+            <div class="card-content">
+                <h3>Veg Grilled Sandwiches</h3>
+                <p>Crispy grilled bread with fresh veggies, butter, and tasty chutney.</p>
+               <div class="price">
+                 <span>$10</span>
+                  <i class="fa-solid fa-bag-shopping cart-btn"></i>
+               </div>
+            </div>
+        </div>
+
+        <div class="menu-card fries" data-name="Classic French Fries" data-price="8" data-image="images/Classic_FrenchFries.jpg">
+            <img src="images/Classic_FrenchFries.jpg" loading="eager">
+            <div class="card-content">
+                <h3>Classic French Fries</h3>
+                <p>Crispy golden fries with a light salt seasoning.</p>
+                <div class="price">
+                    <span>$8</span>
+                    <i class="fa-solid fa-bag-shopping cart-btn"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-card drink" data-name="Cold Coffee" data-price="12" data-image="images/Cold_Coffee.jpg">
+            <img src="images/Cold_Coffee.jpg" loading="eager">
+            <div class="card-content">
+                <h3>Cold Coffee</h3>
+                <p>Chilled coffee blended with milk and sugar, topped with foam</p>
+                <div class="price">
+                    <span>$12</span>
+                    <i class="fa-solid fa-bag-shopping cart-btn"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-card burger" data-name="Crispy Veg Burger" data-price="18"  data-image="images/Crispy_VegBurger.jpg">
+            <img src="images/Crispy_VegBurger.jpg" loading="eager">
+            <div class="card-content">
+                <h3>Crispy Veg Burger</h3>
+                <p>Crispy veggie patty with fresh lettuce and creamy sauce.</p>
+                <div class="price">
+                    <span>$18</span>
+                    <i class="fa-solid fa-bag-shopping cart-btn"></i>
+                </div>
+            </div>
+        </div>
+        <div class="menu-card Pizza" data-name="Veggie Supreme Pizza" data-price="18" data-image="images/VeggieSupreme_Pizza.jpg">
+            <img src="images/VeggieSupreme_Pizza.jpg" loading="eager">
+            <div class="card-content">
+                <h3>Veggie Supreme Pizza</h3>
+                <p>A delicious pizza loaded with fresh vegetables, melted cheese, and rich tomato sauce.</p>
+                <div class="price">
+                    <span>$18</span>
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+            </div>
+        </div>
+        <div class="menu-card burger" data-name="Paneer Burger" data-price="18" data-image="images/paneer_buger.jpg">
+            <img src="images/paneer_buger.jpg" loading="eager">
+            <div class="card-content">
+                <h3>Paneer Burger</h3>
+                <p>A tasty burger with a grilled paneer patty, fresh veggies, and flavorful sauces.</p>
+                <div class="price">
+                    <span>$18</span>
+                    <i class="fa-solid fa-bag-shopping cart-btn"></i>
+                </div>
+            </div>
+        </div>
+        <div class="menu-card sandwich" data-name="Paneer Sandwich" data-price="18"  data-image="images/paneer_sandwich.jpg">
+            <img src="images/paneer_sandwich.jpg" loading="eager">
+            <div class="card-content">
+                <h3>Paneer Sandwich</h3>
+                <p>Soft paneer with onions, sauces, and spices in toasted bread.</p>
+                <div class="price">
+                    <span>$18</span>
+                    <i class="fa-solid fa-bag-shopping cart-btn"></i>
+                </div>
+            </div>
+        </div>
+       
+        <div class="menu-card fries" data-name="Peri Peri Fries" data-price="8"  data-image="images/PeriPeri_Fries.jpg">
+            <img src="images/PeriPeri_Fries.jpg" loading="eager">
+            <div class="card-content">
+                <h3>Peri Peri Fries</h3>
+                <p>Spicy and tangy fries coated with peri peri seasoning.</p>
+                <div class="price">
+                    <span>$8</span>
+                    <i class="fa-solid fa-bag-shopping cart-btn"></i>
+                </div>
+            </div>
+        </div>
+        <div class="menu-card drink" data-name="Fresh Lime Soda" data-price="8" data-image="images/fresh_limesoda.jpg">
+            <img src="images/fresh_limesoda.jpg" loading="eager">
+            <div class="card-content">
+                <h3>Fresh Lime Soda</h3>
+                <p>Refreshing lemon drink with soda and a hint of mint.</p>
+                <div class="price">
+                    <span>$8</span>
+                    <i class="fa-solid fa-bag-shopping cart-btn"></i>
+                </div>
+            </div>
+        </div>
+         <div class="menu-card pizza" data-name="Cheese Burst Pizza" data-price="8" data-image="images/cheese_burstpizza.jpg">
+            <img src="images/cheese_burstpizza.jpg" loading="eager">
+            <div class="card-content">
+                <h3>Cheese Burst Pizza</h3>
+                <p>Extra cheese filled crust with soft & gooey melted cheese inside</p>
+                <div class="price">
+                    <span>$8</span>
+                    <i class="fa-solid fa-bag-shopping cart-btn"></i>
+                </div>
+            </div>
+        </div>
+        
+    
+    </div>
+     <div class="view-more">
+         <a href="menu.html">
+    <button id="viewMoreBtn">View More</button>
+    </a>
+</div>
+</section>
+<footer class="footer">
+
+    <div class="footer-container">
+
+        
+        <div class="footer-col">
+           <h2>Tasty<span class="go">Go</span>🍽️</h2>
+            <p>Delicious food delivered to your doorstep.</p>
+        </div>
+
+        
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </div>
+
+        
+        <div class="footer-col">
+            <h3>Contact</h3>
+            <p>Email: tastygo@gmail.com</p>
+            <p>Phone: +91 9876543210</p>
+        </div>
+
+       
+        <div class="footer-col">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <span>📘</span>
+                <span>📸</span>
+                <span>🐦</span>
+            </div>
+        </div>
+
+    </div>
+
+    <p class="footer-bottom">© 2026 TastyGo. All rights reserved.</p>
+
+</footer>
+    
+        <script src="js/index.js"></script>
+        <script src="js/comman.js"></script>
+   
+</body>
+</html>

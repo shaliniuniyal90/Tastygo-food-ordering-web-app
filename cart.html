@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food With Shalini</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="cart-page">
+    
+    <header>
+            <nav class="navbar">
+
+    <div class="logo">Tasty<span>Go🍽️</span></div>
+
+    <ul class="nav_links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="offer.html">Offers</a></li>
+        <li class="mobile-only"><a href="login.html">Login</a></li>
+        <li class="mobile-only"><a href="#" onclick="logout()">Logout</a></li>
+        <li class="mobile-only">
+    <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+</li>
+    </ul>
+
+    <div class="nav_right">
+
+        <div class="cart_icon">
+            <a href="cart.html">
+                <i class="fa-solid fa-shopping-cart"></i>
+            </a>
+        </div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <div class="search_box">
+            <input type="text" id="searchInput" placeholder="Search food..." />
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <a href="login.html" class="login_link">
+            <i class="fa-solid fa-user"></i>
+        </a>
+
+        <div class="logout_icon" onclick="logout()" title="Logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+
+        <div class="login_btn">
+            <a href="#" onclick="checkLoginAndRedirect('menu.html')">ORDER NOW</a>
+        </div>
+
+    </div> 
+</nav>
+
+    </header>
+
+        <div id="cart-container"></div>
+        <footer class="footer">
+
+    <div class="footer-container">
+          
+        <div class="footer-col">
+           <h2>Tasty<span class="go">Go</span>🍽️</h2>
+            <p>Delicious food delivered to your doorstep.</p>
+        </div>
+
+       
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contact</h3>
+            <p>Email: tastygo@gmail.com</p>
+            <p>Phone: +91 9876543210</p>
+        </div>
+
+       
+        <div class="footer-col">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <span>📘</span>
+                <span>📸</span>
+                <span>🐦</span>
+            </div>
+        </div>
+
+    </div>
+
+    <p class="footer-bottom">© 2026 TastyGo. All rights reserved.</p>
+
+</footer>
+        
+    
+      <script src="js/cart.js"></script>
+      <script src="js/comman.js"></script>
+   
+</body>
+</html>
