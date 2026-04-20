@@ -15,7 +15,7 @@ A modern and responsive food ordering website with login system, cart functional
 - JavaScript
 
 ## 🌐 Live Demo
-https://shaliniuniyal90.github.io/TastyGo-food-ordering-web-app
+https://shaliniuniyal90.github.io/Tastygo-food-ordering-web-app/
 
 ## 📌 Author
 Shalini Uniyal
